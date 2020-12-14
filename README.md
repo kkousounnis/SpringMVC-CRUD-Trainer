@@ -1,2 +1,2 @@
 # SpringMVC-CRUD-Trainer
-CRUD-Hibernate Implementation using SpringMVC Technologies 
+CRUD Implementation using SpringMVC and Hibernate JPA Technologies
