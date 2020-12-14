@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS `pschooltrainers`;
+-- DROP DATABASE IF EXISTS `pschooltrainers`;
 
 CREATE DATABASE IF NOT EXISTS `pschooltrainers`;
 USE `pschooltrainers`;
