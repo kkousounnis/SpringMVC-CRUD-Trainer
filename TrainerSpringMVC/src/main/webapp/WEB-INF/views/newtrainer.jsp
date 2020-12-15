@@ -19,7 +19,7 @@
         <div class="container">
             <%@ include file="../mymenu.jsp" %> 
             <h1>Register a new Trainer</h1> 
-            <form:form method="POST" action="new" modelAttribute="student">
+            <form:form method="POST" action="new" modelAttribute="trainer">
                 <form:input type="hidden" path="id" id="id"/>
                 First Name: <form:input path="firstName" /><br />
                 Last Name: <form:input path="lastName" /><br />
