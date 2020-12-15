@@ -1,4 +1,4 @@
-package com.mycompany.trainermvc.trainermvc.configuration;
+package com.mycompany.trainermvc.configuration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

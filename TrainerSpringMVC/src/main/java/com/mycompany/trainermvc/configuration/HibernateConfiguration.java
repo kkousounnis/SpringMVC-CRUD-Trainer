@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.trainermvc.trainermvc.configuration;
+package com.mycompany.trainermvc.configuration;
 
 import java.util.Properties;
 import javax.sql.DataSource;
@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({"com.mycompany.trainermvc.trainermvc.configuration"})
+@ComponentScan({"com.mycompany.trainermvc.configuration"})
 @PropertySource(value = {"classpath:application.properties"})
 public class HibernateConfiguration {
 
@@ -32,7 +32,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[]{"org.afdemp.studentmvc.entities"});
+        sessionFactory.setPackagesToScan(new String[]{"com.mycompany.trainermvc.entities"});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

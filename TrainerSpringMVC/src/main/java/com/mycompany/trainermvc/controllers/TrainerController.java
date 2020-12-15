@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.trainermvc.trainermvc.controllers;
+package com.mycompany.trainermvc.controllers;
 
-import com.mycompany.trainermvc.trainermvc.services.ITrainer;
+import com.mycompany.trainermvc.entities.Trainer;
+import com.mycompany.trainermvc.services.ITrainer;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -32,12 +33,13 @@ public class TrainerController {
     // index
     @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
     public String listAllStudents(ModelMap view, @RequestParam(required = false) String msg) {
-        //List<Trainer> trainers  = trainerService.findAllTrainers();
-        //view.addAttribute("students", students);
-        //view.addAttribute("editurl", editurl);
-        //view.addAttribute("deleteurl", deleteurl);
-        //view.addAttribute("msg", msg);
-        return("studentlist");
+        List<Trainer> trainers  = trainerService.findAllTrainers();
+        view.addAttribute("trainers", trainers);
+        view.addAttribute("editurl", editurl);
+        view.addAttribute("deleteurl", deleteurl);
+        view.addAttribute("msg", msg);
+        return("trainerlist");
     }
+    
     
 }
