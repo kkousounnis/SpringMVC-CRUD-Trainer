@@ -10,9 +10,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Students' List</title>
+        <title>Trainer's List</title>
+        <link href="<c:url value="/resources/bootstrap.min.css" />" rel="stylesheet">
     </head>
     <body>
+        <%@ include file="../mymenu.jsp" %> 
         <h1>Trainer's List</h1>
         <table>
 		<tr>
