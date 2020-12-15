@@ -14,23 +14,26 @@
         <link href="<c:url value="/resources/bootstrap.min.css" />" rel="stylesheet">
     </head>
     <body>
-        <%@ include file="../mymenu.jsp" %> 
-        <h1>Trainer's List</h1>
-        <table>
-		<tr>
-                    <td>ID</td><td>FIRST NAME</td><td>LAST NAME</td><td>Subject</td><td></td>
-		</tr>
-		<c:forEach items="${trainers}" var="trainer">
-			<tr>
-                            <!-- edit: http://localhost:8081/edit/{id} -->
-                            <td><a href="<c:url value='${editurl}/${trainer.id}' />">${trainer.id}</a></td>
-                            <td>${trainer.firstName}</td>
-                            <td>${trainer.lastName}</td>
-                            <td>${trainer.subject}</td>
-                            <td><a href="<c:url value='${deleteurl}/${trainer.id}' />">delete</a></td>
-			</tr>
-		</c:forEach>
-	</table>
-        <div id="msg">${msg}</div>
+        <div class="container">
+            <%@ include file="../mymenu.jsp" %> 
+            <h1>Trainer's List</h1>
+            <table class="table table-hover">
+                <tr>
+                    <td>Update</td><td>FIRST NAME</td><td>LAST NAME</td><td>Subject</td><td>Delete</td>
+                </tr>
+                <c:forEach items="${trainers}" var="trainer">
+                    <tr>
+                        <!-- edit: http://localhost:8081/edit/{id} -->
+                        
+                        <td><a href=" <c:url value='${editurl}/${trainer.id}' />">update</a></td>
+                        <td>${trainer.firstName}</td>
+                        <td>${trainer.lastName}</td>
+                        <td>${trainer.subject}</td>
+                        <td><a href="<c:url value='${deleteurl}/${trainer.id}' />">delete</a></td>
+                    </tr>
+                </c:forEach>
+            </table>
+            <div id="msg">${msg}</div>
+        </div>
     </body>
 </html>

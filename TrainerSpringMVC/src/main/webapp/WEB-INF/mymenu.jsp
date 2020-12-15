@@ -9,51 +9,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <nav class="navbar navbar-expand-lg navbar-blue bg-light">
-                
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
                 <ul class="navbar-nav">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle " type="button" data-toggle="dropdown">Customers
-                                    <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="customer?action=insertcustomer">New</a></li>
-                                    <li><a class="dropdown-item" href="#">Update</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="customer?action=customerlist">View all</a></li>  
-                                </ul>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Products
-                                    <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="product?action=insertproduct">New</a></li>
-                                    <li><a class="dropdown-item" href="#">Update</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="product?action=productlist">View all</a></li>                            
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Orders
-                                    <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">New</a></li>
-                                    <li><a class="dropdown-item" href="#">Update</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                    <li><a class="dropdown-item" href="#">View all</a></li>  
-                                </ul>
-                            </div>  
-                        </div>
-                    </div>
+                    <li class="nav-item active">
+                        <a class="nav-item nav-link" href="#">NewTrainer</a>                            
+                    </li>
                 </ul>                
             </nav>
         </div>
