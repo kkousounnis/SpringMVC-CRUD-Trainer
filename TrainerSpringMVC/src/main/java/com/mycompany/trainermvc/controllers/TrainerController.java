@@ -52,7 +52,7 @@ public class TrainerController {
         return ("newtrainer");
     }
 
-    // post form for new student
+    // post form for new trainer
     @RequestMapping(value = "/new", method = RequestMethod.POST)
     public String saveStudent(ModelMap view, Trainer trainer) {
         if (trainerService.save(trainer)) {

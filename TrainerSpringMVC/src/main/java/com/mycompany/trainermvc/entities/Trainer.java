@@ -60,6 +60,13 @@ public class Trainer implements Serializable {
         return id;
     }
 
+    public Trainer(Integer id, String firstName, String lastName, String subject) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.subject = subject;
+    }   
+    
     public void setId(Integer id) {
         this.id = id;
     }

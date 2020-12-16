@@ -23,7 +23,7 @@
                 String updateUrlFINAL = request.getContextPath() + "/" + request.getAttribute("updateurl");
                 session.setAttribute("updateUrlFINAL", updateUrlFINAL);
             %>
-            <form:form method="POST" action="${updateUrlFINAL}" modelAttribute="student">
+            <form:form method="POST" action="${updateUrlFINAL}" modelAttribute="trainer">
                 <form:input type="hidden" path="id" id="id"/>
                 First Name: <form:input path="firstName"  /><br />
                 Last Name: <form:input path="lastName" /><br />

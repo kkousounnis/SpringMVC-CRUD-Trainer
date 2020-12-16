@@ -14,31 +14,38 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service("trainerService")
 @Transactional
-public class TrainerImpl implements ITrainer{
-    
+public class TrainerImpl implements ITrainer {
+
     @Autowired
     TrainerDaoImpl dao;
-    
+
     @Override
     public List<Trainer> findAllTrainers() {
         List<Trainer> trainers = dao.findAllTrainers();
         return trainers;
     }
 
-    public Trainer findById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public boolean save(Trainer trainer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.save(trainer);
     }
 
     public boolean delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.delete(id);
     }
 
     public boolean update(Trainer student) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        student.setFirstName(convertTextToUpper(student.getFirstName()));
+        student.setLastName(convertTextToUpper(student.getLastName()));
+        dao.update(student);
+        return true;
     }
     
+    public Trainer findById(int id) {
+        return dao.findById(id);
+    }
+    
+    protected String convertTextToUpper(String text) {
+        return text.toUpperCase();
+    }
+
 }
