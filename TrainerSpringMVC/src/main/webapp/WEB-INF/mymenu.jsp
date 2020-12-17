@@ -13,7 +13,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-item nav-link" href="#">NewTrainer</a>                            
+                        <a class="nav-item nav-link" href="new">NewTrainer</a>                            
                     </li>
                 </ul>                
             </nav>
